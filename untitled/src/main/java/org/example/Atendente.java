@@ -4,7 +4,7 @@ import java.util.Date;
 public class Atendente extends Funcionario{
     private int metaVendas;
 
-    public Atendente(String nome, Date nascimento, int metaVendas) {
+    public Atendente(String nome, String nascimento, int metaVendas) {
         this.nome = nome;
         this.dataNascimento = nascimento;
         this.salario = 2500.00;
@@ -22,4 +22,5 @@ public class Atendente extends Funcionario{
     public void setMetaVendas(int metaVendas) {
         this.metaVendas = metaVendas;
     }
+
 }

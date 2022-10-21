@@ -21,4 +21,10 @@ public abstract class Funcionario extends  Pessoa{
     }
 
     public abstract void calcularComissao(double valorDoPedido);
+
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome + ", Salário: " + this.salario +
+                ", Comissão: " + this.comissao;
+    }
 }

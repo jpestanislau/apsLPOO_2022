@@ -6,7 +6,7 @@ public class Cliente extends Pessoa{
     private String codigoFidadelidade;
     private int nivelFidelidade;
 
-    public Cliente(String nome, Date nascimento, String codigoFidadelidade, int nivelFidelidade) {
+    public Cliente(String nome, String nascimento, String codigoFidadelidade, int nivelFidelidade) {
         this.nome = nome;
         this.dataNascimento = nascimento;
         this.codigoFidadelidade = codigoFidadelidade;
@@ -27,5 +27,10 @@ public class Cliente extends Pessoa{
 
     public void setNivelFidelidade(int nivelFidelidade) {
         this.nivelFidelidade = nivelFidelidade;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome + ", Nível de Fidelidade: " + this.nivelFidelidade;
     }
 }

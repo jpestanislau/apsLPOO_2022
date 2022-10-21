@@ -6,7 +6,7 @@ import java.util.Date;
 public class Gerente extends Funcionario{
     private ArrayList<Atendente> listaSubalternos;
 
-    public Gerente(String nome, Date nascimento, ArrayList<Atendente> listaSubalternos) {
+    public Gerente(String nome, String nascimento, ArrayList<Atendente> listaSubalternos) {
         this.nome = nome;
         this.dataNascimento = nascimento;
         this.salario = 4500.00;
@@ -24,4 +24,6 @@ public class Gerente extends Funcionario{
     public void setListaSubalternos(ArrayList<Atendente> listaSubalternos) {
         this.listaSubalternos = listaSubalternos;
     }
+
+
 }

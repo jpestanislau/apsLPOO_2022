@@ -10,12 +10,16 @@ public class Pedido {
         this.funcionario = vendedor;
 
         //Aumentando o nível de fidelidade do cliente
-        cliente.setNivelFidelidade(
-                cliente.getNivelFidelidade() + 1
-        );
+        incrementaNivelFidelidade(cliente);
 
         //Dando a comissão ao vendedor
         vendedor.calcularComissao(valorDoPedido);
+    }
+
+    private void incrementaNivelFidelidade(Cliente cliente){
+        cliente.setNivelFidelidade(
+                cliente.getNivelFidelidade() + 1
+        );
     }
 
     public Cliente getCliente() {
@@ -40,5 +44,11 @@ public class Pedido {
 
     public void setValorDoPedido(double valorDoPedido) {
         this.valorDoPedido = valorDoPedido;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome C: " + this.cliente.getNome() + ", Nome V: " + this.funcionario.getNome() +
+                ", Valor: " + this.valorDoPedido;
     }
 }
